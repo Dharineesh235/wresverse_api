@@ -1,15 +1,6 @@
-import express, { NextFunction, Request, Response } from 'express';
-import crypto from 'crypto';
+import { app } from './app';
+import { router } from './Routes/mainRouter';
+import { connectMongoDB } from './Configs/mongoConfig';
 
-
-
-
-// generateToken();
-// const app = express();
-
-// app.use('/wwe', (req, res, next)=>{
-//     console.log('done');
-//     res.send("hello...");
-// })
-
-// app.listen(6789, ()=>console.log("listening on port..."))
+connectMongoDB();
+app.use('/wwe', router);
