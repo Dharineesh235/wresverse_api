@@ -18,9 +18,9 @@ export const postSuperstar = (req:Request, res:Response, next:NextFunction) =>{
             signature : req.body.signature,
             poster_url : req.body.poster_url
         }
-        SuperStar_Model.insertMany([data]).then((ack)=>{
+        SuperStar_Model.insertMany([data]).then((data)=>{
             res.status(200).json({
-                msg:ack,
+                data
             })
         }).catch((e:Error)=>{
             console.log(e);
