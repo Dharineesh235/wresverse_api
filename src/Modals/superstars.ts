@@ -6,6 +6,7 @@ interface SuperStar {
     matches : Number,
     won : Number,
     loss : Number,
+    power : Number,
     height : Number,
     weight : Number,
     chest : Number,
@@ -36,6 +37,11 @@ const superStarSchema = new mongoose.Schema<SuperStar>({
         unique : false
     },
     loss : {
+        type : Number,
+        required : true, 
+        unique : false
+    },
+    power : {
         type : Number,
         required : true, 
         unique : false
