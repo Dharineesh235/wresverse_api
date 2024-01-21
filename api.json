@@ -1,0 +1,30 @@
+{
+  "addOneDocument": {
+    "url": "http://localhost:5000/wwe/superstar/newstar",
+    "method": "POST",
+    "body": {
+      "_id": "2",
+      "rank": "2",
+      "name": "John Cena",
+      "matches": "992",
+      "won": 728,
+      "loss": 201,
+      "power": 98,
+      "height": 185,
+      "weight": 251,
+      "chest": 50,
+      "biceps": 19,
+      "signature": "AA",
+      "poster_url": "https://pposter.jpg",
+      "__v": 0
+    }
+  },
+  "addOneDocument": {
+    "url": "http://localhost:5000/wwe/superstar/allstars?sort=-1",
+    "method": "GET"
+  },
+  "deleteOneDocument": {
+    "url": "http://localhost:5000/wwe/superstar/deletestar?rank=965",
+    "method": "DELETE"
+  }
+}

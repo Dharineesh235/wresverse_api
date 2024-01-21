@@ -7,4 +7,4 @@ export const app = express();
 
 app.use(express.json());
 
-app.listen(PORT, ()=>console.log(`listening on ${PORT}...`));
+app.listen(PORT, ()=>console.log(`http://localhost:${PORT}`));
