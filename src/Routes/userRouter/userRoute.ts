@@ -7,6 +7,6 @@ user_router.use('/getUsers', (req:Request, res:Response, next:NextFunction)=>{
     res.status(200).send("Route success ...");
     
 })
-user_router.post('/newUser', postUser);
+user_router.post('/newuser', postUser);
 
 export default user_router;
