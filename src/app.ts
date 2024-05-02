@@ -9,4 +9,4 @@ export const app = express();
 
 app.use(express.json());
 
-app.listen(PORT, ()=>console.log(`Server Running...`));
+app.listen(PORT, ()=>console.log(`http://localhost:${PORT}`));
