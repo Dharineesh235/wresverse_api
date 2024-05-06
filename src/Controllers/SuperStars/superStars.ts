@@ -67,10 +67,9 @@ export const deleteAstarByID = async (
     res: Response,
 ) => {
     try {
-        const { rank } = req.query;
+        const { id } = req.params;
         console.log("deleteAstar");
-        const query = { rank: { $eq: rank } };
-        const data = await SuperStar_Model.deleteOne(query);
+        const data = await SuperStar_Model.deleteOne({_id:id});
         res.send({
             data,
         });
@@ -81,14 +80,14 @@ export const deleteAstarByID = async (
     }
 };
 
-export const updateByRank = async (
+export const updateById = async (
     req: Request,
     res: Response
 ) => {
     try {
         {
             console.log("updateA Star");
-            const { rank } = req.params;
+            const { id } = req.params;
             const { field, value } = req.body;
             const fieldArray = [
                 "rank",
@@ -106,7 +105,7 @@ export const updateByRank = async (
             ]
             const existsOrNot = Object.keys(req.body).every(element => fieldArray.includes(element));
 
-            const filter = { rank };
+            const filter = { _id:id };
             if (!existsOrNot)
                 res.send({
                     msg: "Invalid filed name",
@@ -114,7 +113,7 @@ export const updateByRank = async (
                 });
             const data = await SuperStar_Model.updateOne(filter, req.body);
             res.status(200).send({
-                data, rank, field, value, existsOrNot
+                data, id, field, value, existsOrNot
             })
         }
     } catch (e) {
