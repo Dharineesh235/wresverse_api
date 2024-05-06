@@ -4,7 +4,8 @@
   "description": "wwe card backend app",
   "main": "server.js",
   "scripts": {
-    "start": "concurrently -k \"tsc -p ./ -w \" \"nodemon --quiet ./dist/server.js\""
+    "start": "npm run build && node ./dist/server.js",
+    "build": "tsc"
   },
   "author": "Dharineesh G G",
   "license": "ISC",

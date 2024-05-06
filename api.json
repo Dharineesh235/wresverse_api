@@ -1,6 +1,6 @@
 {
   "addOneDocument": {
-    "url": "http://localhost:5000/wwe/superstar/newstar",
+    "url": "http://localhost:5000/wwe/superstar/star",
     "method": "POST",
     "body": {
       "_id": "2",
@@ -19,12 +19,12 @@
       "__v": 0
     }
   },
-  "addOneDocument": {
+  "getAllDocuments": {
     "url": "http://localhost:5000/wwe/superstar/allstars?sort=-1",
     "method": "GET"
   },
   "deleteOneDocument": {
-    "url": "http://localhost:5000/wwe/superstar/deletestar?rank=965",
+    "url": "http://localhost:5000/wwe/superstar/star/:id",
     "method": "DELETE"
   }
 }
